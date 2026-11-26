@@ -47,6 +47,7 @@ jobs:
     - name: Convert coverage
       run: python -m coverage xml
     - name: Upload coverage to Codecov
+      if: github.repository == 'saimn/sigal'
       uses: codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5 # v7.1.1
       with:
         fail_ci_if_error: true
